@@ -1,0 +1,114 @@
+/* Минимальный хедер для страницы оформления заказа.
+   Best practice e-commerce: убрать навигацию, поиск, корзину.
+   Оставить: кнопку «Назад» (как в мобильных приложениях), логотип,
+   плашку «Безопасная оплата» и телефон для помощи. */
+
+.ih-co {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+}
+
+.ih-co__in {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* ── Кнопка «Назад» ── */
+.ih-co__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid #e2ddd4;
+  background: #fff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, transform .05s;
+}
+.ih-co__back:hover {
+  background: #f6f3ef;
+  border-color: #cfc7b8;
+}
+.ih-co__back:active {
+  transform: translateY(1px);
+}
+.ih-co__back svg { display: block; }
+
+/* ── Логотип ── */
+.ih-co__logo {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+.ih-co__logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* ── Плашка «Безопасная оплата» ── */
+.ih-co__trust {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #f3f8f3;
+  color: #2b7a3e;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ── Телефон ── */
+.ih-co__phone {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.15;
+  text-decoration: none;
+  color: inherit;
+}
+.ih-co__phone-num {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.ih-co__phone-hrs {
+  font-size: 11px;
+  color: #8a8a8a;
+  margin-top: 2px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 720px) {
+  .ih-co__in {
+    gap: 8px;
+    min-height: 56px;
+  }
+  .ih-co__back {
+    padding: 8px;
+    border-radius: 50%;
+  }
+  .ih-co__back-lbl {
+    display: none;
+  }
+  .ih-co__logo img { height: 24px; }
+  .ih-co__trust {
+    display: none;
+  }
+  .ih-co__phone-hrs { display: none; }
+  .ih-co__phone-num { font-size: 14px; }
+}

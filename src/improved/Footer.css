@@ -1,0 +1,450 @@
+/* ═══════════════════════════════════════════════════════════
+   Improved Footer — минималистичный
+   Палитра: графит + тёплая бронза как единственный акцент
+   Ритм отступов: 8 · 16 · 24 · 40 · 64 · 96
+   ═══════════════════════════════════════════════════════════ */
+
+.i-ftr {
+  --ftr-bg:       #141210;
+  --ftr-ink:      #eceae5;
+  --ftr-ink-2:    #b8b3aa;
+  --ftr-ink-3:    #7a746b;
+  --ftr-line:     rgba(236, 234, 229, 0.08);
+  --ftr-accent:   #c8a162;
+  --ftr-hot:      #e58a5b;
+
+  position: relative;
+  margin-top: 96px;
+  background: var(--ftr-bg);
+  color: var(--ftr-ink-2);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.i-ftr .container { padding: 0 32px; }
+
+/* ───────── 1. CTA / подписка ───────── */
+
+.i-ftr__cta {
+  border-bottom: 1px solid var(--ftr-line);
+}
+.i-ftr__cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 72px 32px;
+  align-items: center;
+}
+.i-ftr__cta-eyebrow {
+  color: var(--ftr-accent);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.i-ftr__cta-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: #fff;
+}
+.i-ftr__cta-sub {
+  color: var(--ftr-ink-3);
+  font-size: 14px;
+  max-width: 420px;
+  margin: 0;
+}
+
+.i-ftr__form { width: 100%; max-width: 480px; justify-self: end; }
+.i-ftr__form-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0;
+  border-bottom: 1px solid var(--ftr-ink-3);
+  transition: border-color 0.2s;
+}
+.i-ftr__form-row:focus-within { border-color: var(--ftr-accent); }
+
+.i-ftr__input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 16px 0;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  width: 100%;
+}
+.i-ftr__input::placeholder { color: var(--ftr-ink-3); }
+
+.i-ftr__submit {
+  background: transparent;
+  border: none;
+  color: var(--ftr-accent);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 16px 0 16px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+.i-ftr__submit:hover { color: #e0c487; }
+
+.i-ftr__agree {
+  color: var(--ftr-ink-3);
+  font-size: 12px;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+.i-ftr__agree a {
+  color: var(--ftr-ink-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ftr-line);
+  transition: color 0.15s, border-color 0.15s;
+}
+.i-ftr__agree a:hover { color: var(--ftr-accent); border-color: var(--ftr-accent); }
+
+.i-ftr__form-ok {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--ftr-accent);
+}
+.i-ftr__form-check {
+  width: 28px; height: 28px; flex: 0 0 28px;
+  border-radius: 50%;
+  background: var(--ftr-accent);
+  color: #1a1410;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px;
+}
+.i-ftr__form-ok b { display: block; color: #fff; font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+.i-ftr__form-ok small { color: var(--ftr-ink-3); font-size: 13px; }
+
+/* ───────── 2. Trust-полоса ───────── */
+
+.i-ftr__trust {
+  border-bottom: 1px solid var(--ftr-line);
+}
+.i-ftr__trust-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 28px 32px;
+}
+.i-ftr__trust-item {
+  padding: 0 24px;
+  border-left: 1px solid var(--ftr-line);
+}
+.i-ftr__trust-item:first-child { border-left: none; padding-left: 0; }
+.i-ftr__trust-item:last-child { padding-right: 0; }
+.i-ftr__trust-item b {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.i-ftr__trust-item small {
+  color: var(--ftr-ink-3);
+  font-size: 12.5px;
+}
+
+/* ───────── 3. Основная сетка ───────── */
+
+.i-ftr__main {
+  padding: 72px 0 64px;
+}
+.i-ftr__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 64px;
+}
+
+.i-ftr__logo {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.i-ftr__logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+.i-ftr__brand-desc {
+  color: var(--ftr-ink-3);
+  font-size: 13.5px;
+  line-height: 1.65;
+  max-width: 300px;
+  margin: 0 0 32px;
+}
+
+.i-ftr__contact { margin-bottom: 28px; }
+.i-ftr__phone {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.i-ftr__phone:hover { color: var(--ftr-accent); }
+.i-ftr__phone-sub {
+  color: var(--ftr-ink-3);
+  font-size: 12.5px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+.i-ftr__callback {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ftr-ink-2);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--ftr-line);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.i-ftr__callback:hover { color: var(--ftr-accent); border-color: var(--ftr-accent); }
+
+/* Соцсети */
+.i-ftr__social {
+  display: flex;
+  gap: 14px;
+}
+.i-ftr__soc {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--ftr-ink-3);
+  transition: color 0.15s;
+}
+.i-ftr__soc:hover { color: var(--ftr-accent); }
+
+/* Колонки */
+.i-ftr__col-title {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+.i-ftr__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+.i-ftr__link {
+  color: var(--ftr-ink-2);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.i-ftr__link:hover { color: var(--ftr-accent); }
+.i-ftr__link.is-hot { color: var(--ftr-hot); }
+.i-ftr__link.is-hot:hover { color: #ff9b6f; }
+
+/* ───────── 4. Салоны ───────── */
+
+.i-ftr__salons {
+  padding: 64px 0;
+  border-top: 1px solid var(--ftr-line);
+  border-bottom: 1px solid var(--ftr-line);
+}
+.i-ftr__salons-title {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 32px;
+}
+.i-ftr__salons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.i-ftr__salon {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 16px;
+  border-left: 1px solid var(--ftr-line);
+  transition: border-color 0.2s;
+}
+.i-ftr__salon:hover { border-color: var(--ftr-accent); }
+.i-ftr__salon-city {
+  color: var(--ftr-ink-3);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.i-ftr__salon-addr {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.i-ftr__salon-hrs {
+  color: var(--ftr-ink-3);
+  font-size: 12.5px;
+}
+
+/* ───────── 5. SEO / тэги / города ───────── */
+
+.i-ftr__seo {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--ftr-line);
+}
+.i-ftr__seo-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+.i-ftr__seo-title {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+.i-ftr__tags, .i-ftr__cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.i-ftr__tag, .i-ftr__city {
+  color: var(--ftr-ink-3);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.i-ftr__tag:hover, .i-ftr__city:hover { color: var(--ftr-accent); }
+
+/* ───────── 6. Нижняя полоса ───────── */
+
+.i-ftr__bottom {
+  padding: 28px 0;
+}
+.i-ftr__bottom-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 32px;
+}
+.i-ftr__copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ftr-ink-2);
+  font-size: 12.5px;
+}
+.i-ftr__copy-sep { color: var(--ftr-ink-3); opacity: 0.5; }
+.i-ftr__copy-muted { color: var(--ftr-ink-3); }
+
+.i-ftr__pay {
+  justify-self: center;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.i-ftr__pay-item {
+  color: var(--ftr-ink-3);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.i-ftr__policy {
+  justify-self: end;
+  display: flex;
+  gap: 24px;
+}
+.i-ftr__policy a {
+  color: var(--ftr-ink-3);
+  font-size: 12.5px;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.i-ftr__policy a:hover { color: var(--ftr-accent); }
+
+/* ───────── scroll-to-top ───────── */
+
+.i-ftr__top {
+  position: absolute;
+  top: -20px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ftr-bg);
+  color: var(--ftr-ink-2);
+  border: 1px solid var(--ftr-line);
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: color 0.15s, border-color 0.15s, transform 0.2s;
+}
+.i-ftr__top:hover {
+  color: var(--ftr-accent);
+  border-color: var(--ftr-accent);
+  transform: translateY(-2px);
+}
+
+/* ───────── Адаптив ───────── */
+
+@media (max-width: 1100px) {
+  .i-ftr__cta-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 56px 32px;
+  }
+  .i-ftr__form { justify-self: start; max-width: 100%; }
+  .i-ftr__grid { grid-template-columns: 1fr 1fr; gap: 48px 40px; }
+  .i-ftr__brand { grid-column: 1 / -1; }
+  .i-ftr__salons-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .i-ftr__trust-inner { grid-template-columns: repeat(2, 1fr); gap: 20px 0; padding: 24px 32px; }
+  .i-ftr__trust-item:nth-child(3) { border-left: none; padding-left: 0; }
+  .i-ftr__bottom-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: start;
+  }
+  .i-ftr__pay { justify-self: start; }
+  .i-ftr__policy { justify-self: start; }
+}
+
+@media (max-width: 720px) {
+  .i-ftr { margin-top: 64px; }
+  .i-ftr .container { padding: 0 20px; }
+  .i-ftr__cta-inner { padding: 48px 20px; gap: 32px; }
+  .i-ftr__cta-title { font-size: 26px; }
+  .i-ftr__trust-inner { grid-template-columns: 1fr; padding: 20px; gap: 16px; }
+  .i-ftr__trust-item { border-left: none; padding: 0; }
+  .i-ftr__main { padding: 48px 0 40px; }
+  .i-ftr__grid { grid-template-columns: 1fr; gap: 40px; }
+  .i-ftr__salons { padding: 48px 0; }
+  .i-ftr__salons-grid { grid-template-columns: 1fr; gap: 20px; }
+  .i-ftr__seo { padding: 48px 0; }
+  .i-ftr__seo-inner { grid-template-columns: 1fr; gap: 40px; }
+  .i-ftr__form-row { grid-template-columns: 1fr; }
+  .i-ftr__input { padding: 14px 0; }
+  .i-ftr__submit {
+    padding: 14px 0;
+    text-align: left;
+    border-top: 1px solid var(--ftr-line);
+  }
+  .i-ftr__top { right: 20px; }
+}

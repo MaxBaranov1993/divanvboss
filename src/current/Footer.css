@@ -1,0 +1,90 @@
+.c-ftr {
+  background: #f6f6f6; color: #282727;
+  margin-top: 48px; font-size: 14px;
+}
+
+/* Основная сетка: 4 колонки — Покупателям | Компания | Каталог (wide) | Контакты */
+.c-ftr__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr auto;
+  gap: 48px;
+  padding: 56px 64px;
+}
+.c-ftr__col ul { list-style: none; padding: 0; margin: 0; }
+.c-ftr__col li { margin-bottom: 10px; }
+.c-ftr__title {
+  font-size: 15px; font-weight: 600; color: #282727;
+  margin: 0 0 18px;
+}
+.c-ftr__col a {
+  color: #282727; font-size: 14px;
+  transition: color .15s;
+}
+.c-ftr__col a:hover { color: #c96a2e; }
+
+.c-ftr__catalog {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px;
+}
+
+.c-ftr__col--contacts {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 20px;
+  min-width: 200px;
+}
+.c-ftr__phone {
+  font-size: 18px; font-weight: 600; color: #282727;
+  white-space: nowrap;
+}
+.c-ftr__social { display: flex; gap: 10px; }
+.c-ftr__soc {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #282727; color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .15s;
+}
+.c-ftr__soc:hover { background: #1a1a1a; color: #fff; }
+
+/* Нижняя строка: лого | копирайт | политики */
+.c-ftr__bottom {
+  border-top: 1px solid #e5e5e5;
+  padding: 24px 0;
+}
+.c-ftr__bottom-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+  padding: 0 64px;
+}
+.c-ftr__logo img { height: 28px; width: auto; display: block; filter: invert(1); }
+.c-ftr__copy { font-size: 13px; color: #282727; line-height: 1.5; }
+.c-ftr__copy-muted { color: #7a7a7a; font-size: 12px; }
+.c-ftr__policy {
+  display: flex; gap: 28px;
+  font-size: 13px;
+}
+.c-ftr__policy a {
+  color: #282727; text-decoration: underline;
+  text-decoration-color: rgba(40,39,39,0.3);
+  text-underline-offset: 3px;
+}
+.c-ftr__policy a:hover { color: #c96a2e; text-decoration-color: currentColor; }
+
+@media (max-width: 1200px) {
+  .c-ftr__inner { padding: 48px 20px; gap: 32px; }
+  .c-ftr__bottom-inner { padding: 0 20px; }
+}
+@media (max-width: 960px) {
+  .c-ftr__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .c-ftr__col--wide { grid-column: 1 / -1; }
+  .c-ftr__col--contacts { grid-column: 1 / -1; align-items: flex-start; }
+  .c-ftr__bottom-inner {
+    grid-template-columns: 1fr; gap: 16px;
+  }
+  .c-ftr__policy { flex-wrap: wrap; gap: 12px 20px; }
+}
+@media (max-width: 520px) {
+  .c-ftr__inner { grid-template-columns: 1fr; }
+  .c-ftr__catalog { grid-template-columns: 1fr; }
+}
