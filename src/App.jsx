@@ -6,6 +6,7 @@ import ImprovedHome from './improved/HomePage.jsx';
 import ImprovedProduct from './improved/ProductPage.jsx';
 import ImprovedCheckout from './improved/CheckoutPage.jsx';
 import ImprovedJournal from './improved/JournalPage.jsx';
+import ImprovedLoyalty from './improved/LoyaltyPage.jsx';
 import VersionSwitcher from './shared/VersionSwitcher.jsx';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/improved/product" element={<ImprovedProduct />} />
         <Route path="/improved/checkout" element={<ImprovedCheckout />} />
         <Route path="/improved/journal" element={<ImprovedJournal />} />
+        <Route path="/improved/loyalty" element={<ImprovedLoyalty />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
@@ -54,6 +56,7 @@ function LandingIndex() {
             <NavLink className="landing__link" to="/improved/product">Карточка <span>+ «Купить в 1 клик», sticky-колонка</span></NavLink>
             <NavLink className="landing__link" to="/improved/checkout">Оформление <span>+ 1 поле адреса, стоимость доставки, кросс-селл</span></NavLink>
             <NavLink className="landing__link" to="/improved/journal">Журнал <span>+ SEO-контент, editorial-вёрстка, CTA и рассылка</span></NavLink>
+            <NavLink className="landing__link" to="/improved/loyalty">Программа лояльности <span>+ калькулятор, тиры, реферальный блок, FAQ-схема</span></NavLink>
           </div>
         </div>
 
