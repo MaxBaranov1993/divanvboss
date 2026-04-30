@@ -340,7 +340,7 @@ export default function LoyaltyPage() {
           <div className="lp-ref__inner">
             <div className="lp-ref__col">
               <span className="lp-section__kicker">ПРИГЛАСИ ДРУГА</span>
-              <h2 className="lp-ref__title">3000 ₽ — вам.<br />И ещё 1000 ₽ — другу</h2>
+              <h2 className="lp-ref__title"><span className="lp-ref__num">3000 ₽</span> — вам.<br />И ещё <span className="lp-ref__num">1000 ₽</span> — другу</h2>
               <p className="lp-ref__text">
                 Поделитесь персональной ссылкой из личного кабинета. Когда друг сделает первую покупку —
                 на ваш счёт упадёт 3000 ₽ бонусами. Ему — приветственная 1000 ₽ за регистрацию по вашей ссылке.
